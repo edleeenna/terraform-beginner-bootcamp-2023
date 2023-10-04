@@ -1,12 +1,21 @@
 # Terraform Beginner Bootcamp 2023 - Week 1
 
+## Root Module Structure
 
+Our root module structure is as follows:
 
+```
+PROJECT_ROOT
+│
+├── main.tf          # everything else
+├── variables.tf     # stores the structure of input variables
+├── providers.tf     # defines required providers and their configuration
+├── outputs.tf       # stores our outputs
+├── terraform.tfvars # the data of variables we want to load into our terraform project
+└── README.md        # required for root modules
+```
 
-
-
-
-
+[Standard Root Module](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 
 ## Terraform and Input variables
 ## Terraform Cloud variables
@@ -64,3 +73,5 @@ Terraform uses a specific order of precedence when determining the value of a va
 6. Variable defaults
 
 [Order of Terraform Variables](https://www.env0.com/blog/terraform-variables)
+
+
