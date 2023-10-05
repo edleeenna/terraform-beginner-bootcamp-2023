@@ -18,3 +18,23 @@ variable "bucket_name" {
   }
 }
 
+variable "index_html_filepath" {
+  description = "File path to the index.html file"
+  type        = string
+
+  validation {
+    condition     = can(file(var.index_html_filepath))
+    error_message = "The sindex.html does not exist or is not accessible."
+  }
+}
+
+variable "error_html_filepath" {
+  description = "File path to the error.html file"
+  type        = string
+
+  validation {
+    condition     = can(file(var.error_html_filepath))
+    error_message = "The error.html does not exist or is not accessible."
+  }
+}
+

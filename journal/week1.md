@@ -145,6 +145,20 @@ It may likely produce older example that could be deprecated. Often affecting pr
 
 ## Working with Files in Terraform
 
+### Fileexists function
+
+This is a built in terraform function to check the existance of a file.
+
+```tf
+   condition  = fileexists(var.error_html_filepath)
+```
+
+[fileexists](https://developer.hashicorp.com/terraform/language/functions/fileexists)
+
+### Filemd5
+
+[Filemd5](https://developer.hashicorp.com/terraform/language/functions/filemd5)
+
 ### Path Variable
 
 In terraform there is a special variable called `path` that allows us to reference local paths.
@@ -154,3 +168,10 @@ In terraform there is a special variable called `path` that allows us to referen
 
 
 [Special Path Variable](https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info)
+
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_object
+resource "aws_s3_object" "index_html" {
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key    = "index.html"
+  source = "${path.root}/public/index.html"
+}
