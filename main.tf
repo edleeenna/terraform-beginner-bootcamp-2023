@@ -29,3 +29,14 @@ provider "terratowns" {
  # content_version = var.content_version
  # assets_path = var.assets_path
 #} 
+
+resource "terratown_home" "home" {
+  name = "How to play Arcanum"
+  description = <<DESCRIPTION
+Arcanum is a game from 2001 that shipped with a lot of bugs. Modders have removed all the originals
+making this game really fun to play. This is my guide on how to play
+  DESCRIPTION
+  domain_name = "12sdf43.cloudfront.net"
+  town = "gamers-grotto"
+  content_version =  1
+}
