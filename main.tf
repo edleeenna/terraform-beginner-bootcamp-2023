@@ -30,8 +30,8 @@ provider "terratowns" {
  # assets_path = var.assets_path
 #} 
 
-resource "terratown_home" "home" {
-  name = "How to play Arcanum"
+resource "terratowns_home" "home" {
+  name = "How to play Arcanum in 2023!!"
   description = <<DESCRIPTION
 Arcanum is a game from 2001 that shipped with a lot of bugs. Modders have removed all the originals
 making this game really fun to play. This is my guide on how to play
