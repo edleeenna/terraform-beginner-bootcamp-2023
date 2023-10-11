@@ -5,6 +5,6 @@ provider "local.providers/local/terratowns" {
   version     = "1.0.0"
   constraints = "1.0.0"
   hashes = [
-    "h1:nFFWgGnajVL/IdwIMg1pT/A7+rMakVCdkM7tvtyE/lc=",
+    "h1:GZY+51s0htgjtyqQkSMTury7YGjQPXV4WxWoX2DHTxI=",
   ]
 }
