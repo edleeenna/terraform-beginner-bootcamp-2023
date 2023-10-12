@@ -18,24 +18,10 @@
 #  }
 #}
 
-variable "index_html_filepath" {
-  description = "File path to the index.html file"
+variable "public_path" {
+  description = "The file path for the public directory"
   type        = string
-
-  validation {
-    condition     = can(file(var.index_html_filepath))
-    error_message = "The sindex.html does not exist or is not accessible."
-  }
-}
-
-variable "error_html_filepath" {
-  description = "File path to the error.html file"
-  type        = string
-
-  validation {
-    condition     = can(file(var.error_html_filepath))
-    error_message = "The error.html does not exist or is not accessible."
-  }
+  
 }
 
 variable "content_version" {
@@ -46,9 +32,4 @@ variable "content_version" {
     condition     = var.content_version >= 1
     error_message = "content_version must be a positive integer starting at 1"
   }
-}
-
-variable "assets_path" {
-  description = "Path to assets folder"
-  type        = string
 }

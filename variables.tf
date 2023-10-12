@@ -10,19 +10,18 @@ variable "terratowns_endpoint" {
   type = string
 }
 
+variable "home_one" {
+  type = object({
+    public_path = string
+    content_version = string
 
-variable "index_html_filepath" {
-  type = string
+  })
 }
 
-variable "error_html_filepath" {
-  type = string
-}
+variable "home_two" {
+  type = object({
+    public_path = string
+    content_version = string
 
-variable "content_version" {
-  type = number
-}
-
-variable "assets_path" {
-  type = string
+  })
 }
